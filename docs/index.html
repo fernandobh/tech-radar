@@ -1,0 +1,595 @@
+<html>
+
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Ânima Tech Radar</title>
+<link rel="shortcut icon" href="https://www.zalando.de/favicon.ico">
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="radar.js"></script>
+
+<link rel="stylesheet" href="radar.css">
+</head>
+
+<body>
+
+<svg id="radar"></svg>
+
+<script>
+radar_visualization({
+  svg_id: "radar",
+  width: 1450,
+  height: 1000,
+  colors: {
+    background: "#fff",
+    grid: "#bbb",
+    inactive: "#ddd"
+  },
+  title: "Ânima Tech Radar — 2021/Q2",
+  quadrants: [
+    { name: "Linguagens & Frameworks" },
+    { name: "Ferramentas" },
+    { name: "Plataformas" },
+    { name: "Técnicas" }
+  ],
+  rings: [
+    { name: "ADOTE", color: "#93c47d" },
+    { name: "EXPERIMENTE", color: "#93d2c2" },
+    { name: "AVALIE", color: "#fbdb84" },
+    { name: "EVITE", color: "#efafa9" }
+  ],
+  print_layout: true,
+  // zoomed_quadrant: 0,
+  //ENTRIES
+  entries: [
+      {
+        label: "Vue.js",
+        quadrant: 0,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Vuetify",
+        quadrant: 0,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Vuex",
+        quadrant: 0,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Typescript",
+        quadrant: 0,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "HTML5",
+        quadrant: 0,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "CSS3",
+        quadrant: 0,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "SASS",
+        quadrant: 0,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "NPM",
+        quadrant: 1,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Yarn",
+        quadrant: 1,
+        ring: 1,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Jest",
+        quadrant: 1,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Cypress",
+        quadrant: 1,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Stubmatic",
+        quadrant: 1,
+        ring: 1,
+        active: false,
+        moved: 0
+      },
+      {
+        label: ".NET Core",
+        quadrant: 0,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "C Sharp",
+        quadrant: 0,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Entity Framework Core",
+        quadrant: 0,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Serilog",
+        quadrant: 0,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "K6",
+        quadrant: 1,
+        ring: 1,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Gatling",
+        quadrant: 1,
+        ring: 3,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "RESTFul API",
+        quadrant: 3,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "FF4J",
+        quadrant: 1,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Feature Toggle",
+        quadrant: 3,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Spring Cloud Config",
+        quadrant: 0,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Swagger",
+        quadrant: 1,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Test Automation",
+        quadrant: 3,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Test Pyramid",
+        quadrant: 3,
+        ring: 1,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "xUnit.net",
+        quadrant: 0,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "NSubstitute",
+        quadrant: 0,
+        ring: 1,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Fluent Assertions",
+        quadrant: 0,
+        ring: 1,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Git",
+        quadrant: 1,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Trunk Based Dev...",
+        quadrant: 3,
+        ring: 1,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Service Mesh",
+        quadrant: 3,
+        ring: 2,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Docker",
+        quadrant: 1,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Docker Compose",
+        quadrant: 1,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "SonarQube",
+        quadrant: 1,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "RestSharp",
+        quadrant: 0,
+        ring: 1,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Azure Pipelines",
+        quadrant: 2,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Azure DevOps",
+        quadrant: 2,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "SQL",
+        quadrant: 0,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "RDS - PostgreSQL",
+        quadrant: 2,
+        ring: 1,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Rancher",
+        quadrant: 1,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Kibana",
+        quadrant: 1,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Elasticsearch",
+        quadrant: 1,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Dynatrace",
+        quadrant: 2,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "New Relic",
+        quadrant: 1,
+        ring: 2,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Istio",
+        quadrant: 1,
+        ring: 2,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Prometheus",
+        quadrant: 1,
+        ring: 1,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Grafana",
+        quadrant: 1,
+        ring: 1,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Jaeger",
+        quadrant: 1,
+        ring: 2,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Tableau",
+        quadrant: 1,
+        ring: 1,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Metabase",
+        quadrant: 1,
+        ring: 1,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Google Tag Manager",
+        quadrant: 1,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Amazon ECR",
+        quadrant: 2,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Amazon EKS",
+        quadrant: 2,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Kafka - Amazon MSK",
+        quadrant: 2,
+        ring: 2,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Azure Service Bus",
+        quadrant: 2,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Amazon SNS",
+        quadrant: 2,
+        ring: 2,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Sensedia",
+        quadrant: 2,
+        ring: 2,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Salesforce",
+        quadrant: 1,
+        ring: 1,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "SOLID",
+        quadrant: 3,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Postman",
+        quadrant: 1,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Clean Architecture",
+        quadrant: 3,
+        ring: 1,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Dapper",
+        quadrant: 0,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Domain-Driven Design",
+        quadrant: 3,
+        ring: 1,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Gherkin",
+        quadrant: 0,
+        ring: 1,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Microservices",
+        quadrant: 3,
+        ring: 1,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "GitLab",
+        quadrant: 2,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "ElastiCache Redis",
+        quadrant: 2,
+        ring: 1,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Oracle Database",
+        quadrant: 2,
+        ring: 3,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Google Analytics",
+        quadrant: 1,
+        ring: 0,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Hotjar",
+        quadrant: 1,
+        ring: 1,
+        active: false,
+        moved: 0
+      },
+      {
+        label: "Azure Artifacts",
+        quadrant: 2,
+        ring: 1,
+        active: false,
+        moved: 0
+      },
+  ]
+  //ENTRIES
+});
+</script>
+
+<table>
+<tr>
+<td>
+
+<h3>O que é o Tech Radar?</h3>
+
+<p>
+  O Ânima Tech Radar é uma lista de tecnologias, complementada por um resultado de avaliação, denominado <em> atribuição de anel </em>. Usamos quatro anéis com a seguinte semântica:
+</p>
+
+<ul>
+<li><strong>ADOTE</strong> &mdash; Tecnologias nas quais temos grande confiança para atender ao nosso propósito, também em larga escala. Tecnologias com cultura de uso em nosso ambiente de produção Ânima, de baixo risco e recomendadas para ampla utilização.</li>
+<li><strong>EXPERIMENTE</strong> &mdash; Tecnologias que vimos funcionar com sucesso em projetos para resolver um problema real; primeira experiência de uso séria que confirma os benefícios e pode revelar limitações. As tecnologias EXPERIMENTE são um pouco mais arriscadas; alguns engenheiros de nossa organização trilharam esse caminho e compartilharão conhecimentos e experiências.</li>
+<li><strong>AVALIE</strong> &mdash; Tecnologias que são promissoras e têm claro potencial de valor agregado para nós; tecnologias que valem a pena investir alguns esforços de pesquisa e prototipagem para ver se tem impacto. As tecnologias AVALIE apresentam riscos mais elevados; eles são frequentemente novos e altamente não comprovados em nossa organização. Você encontrará alguns engenheiros que têm conhecimento na tecnologia e a promoverá, poderá até encontrar equipes que iniciaram um esforço de prototipagem.</li>
+<li><strong>EVITE</strong> &mdash; Tecnologias não recomendadas para uso em novos projetos. Tecnologias que achamos que (ainda) não valem a pena (mais) investir. As tecnologias EVITE não devem ser usadas para novos projetos, mas geralmente podem ser continuadas para projetos existentes.</li>
+</ul>
+
+</td><td>
+
+<h3>Qual é o propósito?</h3>
+
+<p>
+  O Tech Radar é uma ferramenta para inspirar e apoiar as equipes de engenharia da Ânima na escolha das melhores tecnologias para novos projetos; Ele fornece uma plataforma para compartilhar conhecimento e experiência em tecnologias, para refletir sobre as decisões de tecnologia e evoluir continuamente nosso panorama de tecnologia. Com base no <a href="https://www.thoughtworks.com/radar"> trabalho pioneiro da ThoughtWorks</a>, nosso Tech Radar define as mudanças em tecnologias que são interessantes no desenvolvimento de software e mudanças que achamos que nossas equipes de engenharia devem prestar atenção e considerar o uso em seus projetos.
+</p>
+
+<!-- <h3>How do we maintain it?</h3>
+
+<p>
+The Tech Radar is maintained by the <em>Zalando Technologists Guild</em> &mdash; an open group of  senior Zalando technologists committed to devote time to the Tech Radar purpose. The guild self organises to maintain the Tech Radar documents, including this public version. Assignment of technologies to rings is the outcome of ring change proposals, which are discussed and voted on in guild meetings. The Tech Radar depends on active participation and input from all engineering teams at Zalando.
+</p>
+
+<p>
+There is also an <a href="https://techradar.zalando.net/">internal version of the Tech Radar</a> that contains background information about each technology &mdash; when to use it, pros and cons, main risks, which teams at Zalando are using it, and for what purpose.
+</p> -->
+
+</td></tr>
+</table>
+
+<!-- <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-105375141-2', 'auto');
+  ga('send', 'pageview');
+</script> -->
+
+</body>
+</html>
